@@ -1,0 +1,44 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-200;
+  }
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Custom styles */
+.gradient-bg {
+  @apply bg-gradient-to-br from-blue-600 to-indigo-900;
+}
+
+.glass-effect {
+  @apply bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg;
+}
+
+.hover-lift {
+  @apply transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg;
+}
